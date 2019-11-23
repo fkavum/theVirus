@@ -95,6 +95,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+
+
+
+
+
     private void turnOnTheTrail(int effectToActive)
     {
         if (effectToActive != activeTrail)
