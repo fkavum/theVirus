@@ -3930,6 +3930,18 @@ Transform:
   m_Father: {fileID: 25040539}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873646605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5104618926334030222, guid: 87787ee56dab30f4c9c2599a2112dd6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4462685575993994008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42844a4fccbd54746b90cade4ff70f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &908060991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4282,6 +4294,7 @@ GameObject:
   - component: {fileID: 1096369802}
   - component: {fileID: 1096369804}
   - component: {fileID: 1096369805}
+  - component: {fileID: 1096369806}
   m_Layer: 0
   m_Name: Managers
   m_TagString: GameManager
@@ -4414,6 +4427,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75b71f338812324da89617120bcc957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1096369806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096369801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d9716325d63f442bb3781f298bb60b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redButton: {fileID: 0}
+  yellowButton: {fileID: 0}
+  blueButton: {fileID: 0}
+  variableJoystick: {fileID: 873646605}
 --- !u!1 &1106536996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5300,7 +5329,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1562773064}
   - component: {fileID: 1562773063}
-  - component: {fileID: 1562773062}
   - component: {fileID: 1562773061}
   m_Layer: 0
   m_Name: Minimapcamera
@@ -5323,14 +5351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPosition: {fileID: 5006512735717227847}
   moveSpeed: 3
---- !u!81 &1562773062
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562773060}
-  m_Enabled: 1
 --- !u!20 &1562773063
 Camera:
   m_ObjectHideFlags: 0
@@ -6268,6 +6288,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 5104618926334030221, guid: 87787ee56dab30f4c9c2599a2112dd6f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1513
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87787ee56dab30f4c9c2599a2112dd6f, type: 3}
 --- !u!4 &5006512735717227847 stripped

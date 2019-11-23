@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(Olustur());
       
         TrailRenderer tr;
+
         foreach (GameObject trailEffect in traills)
         {
             tr = trailEffect.GetComponentInChildren<TrailRenderer>();
@@ -57,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         SoundManager sm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<SoundManager>();
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (InputManager.redTrail)
         {
             turnOnTheTrail(1);
             sm.PlaySalgi();
@@ -67,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             trailObj.GetComponent<CollidingTrail>().trailType = TrailType.Red;
             trailObj.transform.name = "RedTrail";
         }
-        else if (Input.GetKey(KeyCode.Alpha2))
+        else if (InputManager.yellowTrail)
         {
             turnOnTheTrail(2);
             sm.PlaySalgi();
@@ -78,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             trailObj.GetComponent<CollidingTrail>().trailType = TrailType.Yellow;
             trailObj.transform.name = "YellowTrail";
         }
-        else if (Input.GetKey(KeyCode.Alpha3))
+        else if (InputManager.blueTrail)
         {
             turnOnTheTrail(3);
             sm.PlaySalgi();
@@ -125,10 +126,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        /*
 
-
-        
-        if (Input.GetMouseButton(0)) { 
+        if (InputManager.touchMove) { 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -138,8 +138,13 @@ public class PlayerMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(hit.point.x,transform.position.y,hit.point.z), step);
             transform.LookAt(new Vector3(hit.point.x,transform.position.y,hit.point.z));
         }
-        }
+        }*/
 
-        
+
+
+        float step = speed * Time.deltaTime;
+        transform.Translate(InputManager.horizontalMove* step, 0,  InputManager.verticalMove* step);
+
+
     }
 }
